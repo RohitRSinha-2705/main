@@ -1,6 +1,14 @@
-var li = document.getElementsByTagName('li');
-for (var i = 0; i< li.length; i++){
-    li[i].style.fontWeight = 'bold';
+
+
+
+var seconditem = document.querySelector('.list-group-item:nth-child(2)');
+//seconditem.style.backgroundColor = "green";
+var thirditem = document.querySelector('.list-group-item:nth-child(3)');
+thirditem.style.color = "transparent";
+var odd = document.querySelectorAll('li:nth-child(odd)');
+for(var i=0; i<odd.length; i++){
+    odd[i].style.backgroundColor="green";
+
 }
-li[1].style.backgroundColor="orange";
-li[3].style.backgroundColor="green";
+var seconditem2 = document.querySelector('.list-group-item:nth-child(2)');
+seconditem2.style.backgroundColor = "green";

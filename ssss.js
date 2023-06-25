@@ -1,5 +1,6 @@
-var xyz = document.getElementsByClassName('list-group-item');
-xyz[2].style.backgroundColor = 'green';
-for (var i = 0; i< xyz.length; i++){
-    xyz[i].style.fontWeight = 'bold';
+var li = document.getElementsByTagName('li');
+for (var i = 0; i< li.length; i++){
+    li[i].style.fontWeight = 'bold';
 }
+li[1].style.backgroundColor="orange";
+li[3].style.backgroundColor="green";

@@ -1,26 +1,33 @@
-var itemlist = document.querySelector('#items');
-console.log(itemlist.parentElement);
-itemlist.parentElement.style.backgroundColor = "Orange";
-console.log(itemlist.firstChild);
-console.log(itemlist.firstElementChild);
-itemlist.firstElementChild.textContent = 'Hello 1';
-console.log(itemlist.lastChild);
-console.log(itemlist.lastElementChild);
-itemlist.lastElementChild.textContent = 'Hello 4';
-console.log(itemlist.nextSibling);
-console.log(itemlist.nextElementSibling);
-console.log(itemlist.previousSibling);
-console.log(itemlist.previousElementSibling);
-itemlist.previousElementSibling.style.color = 'green';
+// Get input value
+var newItem = document.getElementById('item').value;
+var newDesc = document.getElementById('item-desc').value;
 
-var newdiv = document.createElement('div');
-newdiv.className = 'Hello';
-newdiv.id = 'Hello1';
-newdiv.setAttribute('title','new Div');
-var newDivText = document.createTextNode('Hello World');
-newdiv.appendChild(newDivText);
-var container = document.querySelector('header .container');
-var h1 = document.querySelector('header h1');
-console.log(newdiv);
-newdiv.style.fontSize = '30px';
-container.insertBefore(newdiv,h1);
+// Create new li element
+var li = document.createElement('li');
+// Add class
+li.className = 'list-group-item';
+// Add text node with input value
+li.appendChild(document.createTextNode(newItem));
+li.appendChild(document.createTextNode(newDesc));
+
+// Create del button element
+var deleteBtn = document.createElement('button');
+var editBtn = document.createElement('button');
+
+
+// Add classes to del button
+deleteBtn.className = 'btn btn-danger btn-sm float-right delete';
+editBtn.className = 'btn btn-danger btn-sm float-right edit';
+
+
+// Append text node
+deleteBtn.appendChild(document.createTextNode('X'));
+editBtn.appendChild(document.createTextNode('edit'));
+
+
+// Append button to li
+li.appendChild(deleteBtn);
+li.appendChild(editBtn);
+
+// Append li to list
+itemList.appendChild(li);

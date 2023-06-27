@@ -1,14 +1,26 @@
+var itemlist = document.querySelector('#items');
+console.log(itemlist.parentElement);
+itemlist.parentElement.style.backgroundColor = "Orange";
+console.log(itemlist.firstChild);
+console.log(itemlist.firstElementChild);
+itemlist.firstElementChild.textContent = 'Hello 1';
+console.log(itemlist.lastChild);
+console.log(itemlist.lastElementChild);
+itemlist.lastElementChild.textContent = 'Hello 4';
+console.log(itemlist.nextSibling);
+console.log(itemlist.nextElementSibling);
+console.log(itemlist.previousSibling);
+console.log(itemlist.previousElementSibling);
+itemlist.previousElementSibling.style.color = 'green';
 
-
-
-var seconditem = document.querySelector('.list-group-item:nth-child(2)');
-//seconditem.style.backgroundColor = "green";
-var thirditem = document.querySelector('.list-group-item:nth-child(3)');
-thirditem.style.color = "transparent";
-var odd = document.querySelectorAll('li:nth-child(odd)');
-for(var i=0; i<odd.length; i++){
-    odd[i].style.backgroundColor="green";
-
-}
-var seconditem2 = document.querySelector('.list-group-item:nth-child(2)');
-seconditem2.style.backgroundColor = "green";
+var newdiv = document.createElement('div');
+newdiv.className = 'Hello';
+newdiv.id = 'Hello1';
+newdiv.setAttribute('title','new Div');
+var newDivText = document.createTextNode('Hello World');
+newdiv.appendChild(newDivText);
+var container = document.querySelector('header .container');
+var h1 = document.querySelector('header h1');
+console.log(newdiv);
+newdiv.style.fontSize = '30px';
+container.insertBefore(newdiv,h1);
